@@ -1,0 +1,13 @@
+title: node-cron
+email: node-cron@merencia.com
+description: >-
+  A simple cron-like job scheduler for Node.js
+baseurl: "/"
+url: "node-cron.github.io"
+github_username:  node-cron
+markdown: kramdown
+
+
+sass:
+    sass_dir: _scss
+    style: :compressed
