@@ -3,6 +3,7 @@ const path = require('path');
 
 const { VueLoaderPlugin } = require('vue-loader');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 
 module.exports = {
@@ -32,11 +33,30 @@ module.exports = {
       {
         test: /\.vue$/,
         use: 'vue-loader'
-      }
+      },
+      {
+        test: /\.(png|jpg|gif|svg)$/,
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[ext]',
+          context: 'src'
+        }
+      },
+      {
+        test: /\.scss$/,
+        use: [
+            "style-loader",
+            "css-loader",
+            "sass-loader"
+        ]
+    }
     ]
   },
   plugins: [
     new VueLoaderPlugin(),
-    new HtmlWebpackPlugin({ template: './src/index.html' })
+    new HtmlWebpackPlugin({ template: './src/index.html' }),
+    new CopyWebpackPlugin([
+      { from: 'src/img/**/*', to: 'dist/img/', flatten: true }
+    ])
   ]
 }

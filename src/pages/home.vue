@@ -1,9 +1,7 @@
 <template>
-  <div>
     <page-layout>
-      Esta é uma pagina
+      Uma página
     </page-layout>
-  </div>
 </template>
 
 <script>
@@ -14,3 +12,4 @@ export default {
   }
 }
 </script>
+

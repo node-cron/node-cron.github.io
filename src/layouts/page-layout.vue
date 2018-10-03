@@ -1,13 +1,9 @@
 <template>
-    <div>
-        <base-layout>
-            <div>
-                top
-                <slot></slot>
-                bottom
-            </div>
-        </base-layout>
-    </div>
+    <base-layout>
+        <div>
+            <slot></slot>
+        </div>
+    </base-layout>
 </template>
 
 <script>
