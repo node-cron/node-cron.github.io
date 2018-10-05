@@ -295,17 +295,22 @@ a {
   color: #006D00; }
 </style></head>
   <body>
-    <div id="app"><div><div class="menu"><div class="container"><div><a href="/" class="router-link-exact-active router-link-active"><img src="/img/logo.png"> <span class="name">node-cron</span></a> <div class="links"><a href="/docs" class="">Docs</a> <a href="https://github.com/node-cron/node-cron" target="_blank">Github</a></div></div></div></div> <div><div><div class="slogan"><div class="container"><h1>A simple cron-like job scheduler for Node.js</h1> <div class="demo"><div class="demo-container"><div class="desktop"><div class="editor-application"><div class="application" data-application="">
-  <div class="application-topbar">
-    <div class="application-actions-container">
-      <div class="application-action application-action-close"></div>
-      <div class="application-action application-action-minimize"></div>
-      <div class="application-action application-action-maximize"></div>
-    </div>
-    <div class="application-title-container" data-title-container="">cron.js</div>
-  </div>
-  <div class="application-content-container" data-content-container="" style="min-height: 324px;"></div>
-</div></div></div></div></div> <a href="/docs" class="btn btn-primary btn-large">Getting Started</a></div></div></div></div></div></div>
+    <div id="app"><div><div class="menu"><div class="container"><div><a href="/" class="router-link-active"><img src="/img/logo.png"> <span class="name">node-cron</span></a> <div class="links"><a href="/docs" class="router-link-active">Docs</a> <a href="https://github.com/node-cron/node-cron" target="_blank">Github</a></div></div></div></div> <div><div class="container docs-container"><div class="docs-menu-container"><div class="docs-menu"><a href="/docs/getting-started" class="router-link-exact-active router-link-active">Getting Started</a> <a href="/docs/cron-syntax" class="">Cron Syntax</a></div></div> <div class="docs-content-container"><div><h1>Getting Started</h1> <p>
+            The node-cron module is tiny task scheduler in pure JavaScript for node.js 
+            based on GNU crontab. This module allows you to schedule task in node.js using 
+            full crontab syntax.
+        </p> <p>
+            Install node-cron using npm:
+            <span class="code-inline">$ npm install --save node-cron</span></p> <p>
+            Import node-cron and schedule a task:
+            <code><pre class="code">var cron = require('node-cron');
+
+cron.schedule('* * * * *', () =&gt; {
+console.log('running a task every minute');
+});
+                </pre></code></p> <p>
+            See the <a href="/docs/cron-syntax" class="">cron syntax</a> tho create diferent expressions for jobs scheduling.
+        </p></div></div></div></div></div></div>
     <script type="text/javascript" src="/app.min.js"></script>
   
 
